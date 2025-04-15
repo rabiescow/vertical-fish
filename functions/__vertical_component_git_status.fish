@@ -1,9 +1,12 @@
 function __vertical_component_git_status
-  __vertical_util_set vertical_git_status_color             "#343434" --bold
-  __vertical_util_set vertical_git_status_prefix            ' : '
-  __vertical_util_set vertical_git_status_prefix_color      "#343434" --bold
-  __vertical_util_set vertical_git_status_suffix            "❯"
-  __vertical_util_set vertical_git_status_suffix_color      "#565656" --bold
+  __vertical_util_set vertical_git_status_color             "#DE9A67" --bold \
+                                               --background "#232323"
+  __vertical_util_set vertical_git_status_prefix            "  "
+  __vertical_util_set vertical_git_status_prefix_color      "#ABABDE" --bold \
+                                               --background "#232323"
+  __vertical_util_set vertical_git_status_suffix            ""
+  __vertical_util_set vertical_git_status_suffix_color      "#232323" --bold \
+                                               --background "#232323"
   __vertical_util_set vertical_git_status_sym_added         +
   __vertical_util_set vertical_git_status_sym_added_deleted ±
   __vertical_util_set vertical_git_status_sym_ahead         ↑
@@ -83,10 +86,13 @@ function __vertical_component_git_status
   )
 
   if [ -n "$status_syms" ]
+    set_color normal
     set_color $vertical_git_status_prefix_color
     echo -ens $vertical_git_status_prefix
+    set_color normal
     set_color $vertical_git_status_color
     echo -ens $status_syms
+    set_color normal
     set_color $vertical_git_status_suffix_color
     echo -ens $vertical_git_status_suffix
     set_color normal

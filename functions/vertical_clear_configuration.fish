@@ -12,9 +12,13 @@ function vertical_clear_configuration -d 'Clear vertical prompt configuration'
   set -eU vertical_duration_min
   set -eU vertical_duration_prefix
   set -eU vertical_duration_prefix_color
+  set -eU vertical_duration_suffix
+  set -eU vertical_duration_suffix_color
   set -eU vertical_git_branch_color
   set -eU vertical_git_branch_prefix
   set -eU vertical_git_branch_prefix_color
+  set -eU vertical_git_branch_icon
+  set -eU vertical_git_branch_icon_color
   set -eU vertical_git_status_color
   set -eU vertical_git_status_prefix
   set -eU vertical_git_status_prefix_color
@@ -65,10 +69,18 @@ function vertical_clear_configuration -d 'Clear vertical prompt configuration'
   set -eU vertical_vi_mode_color
   set -eU vertical_vi_mode_prefix
   set -eU vertical_vi_mode_prefix_color
+  set -eU vertical_vi_mode_icon
+  set -eU vertical_vi_mode_icon_color
   set -eU vertical_vi_mode_sym_insert
   set -eU vertical_vi_mode_sym_normal
   set -eU vertical_vi_mode_sym_replace_one
   set -eU vertical_vi_mode_sym_visual
+  set -eU vertical_vi_mode_sym_insert_color
+  set -eU vertical_vi_mode_sym_normal_color
+  set -eU vertical_vi_mode_sym_replace_color
+  set -eU vertical_vi_mode_sym_visual_color
+  set -eU vertical_vi_mode_suffix
+  set -eU vertical_vi_mode_suffix_color
 
   true # Always exit successfully
 end

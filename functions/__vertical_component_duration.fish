@@ -1,8 +1,13 @@
 function __vertical_component_duration
-  __vertical_util_set vertical_duration_color        yellow --bold
+  __vertical_util_set vertical_duration_color        "#dede9a" \
+                                 --bold --background "#232323"
   __vertical_util_set vertical_duration_min          5000
-  __vertical_util_set vertical_duration_prefix       ' '
-  __vertical_util_set vertical_duration_prefix_color yellow --bold
+  __vertical_util_set vertical_duration_prefix       ""
+  __vertical_util_set vertical_duration_prefix_color "#232323" \
+                                 --bold --background "#232323"
+  __vertical_util_set vertical_duration_suffix       ""
+  __vertical_util_set vertical_duration_suffix_color "#232323" \
+                                 --bold --background "#232323"
 
   if [ $CMD_DURATION -lt $vertical_duration_min ]
     return
@@ -39,9 +44,14 @@ function __vertical_component_duration
     end
   end
 
+  set_color normal
   set_color $vertical_duration_prefix_color
   echo -ens $vertical_duration_prefix
+  set_color normal
   set_color $vertical_duration_color
   echo -ens (string join ' ' $dur)
+  set_color normal
+  set_color $vertical_duration_suffix_color
+  echo -ens $vertical_duration_suffix
   set_color normal
 end

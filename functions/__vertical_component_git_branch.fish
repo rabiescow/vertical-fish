@@ -1,9 +1,11 @@
 function __vertical_component_git_branch
-  __vertical_util_set vertical_git_branch_color        "#9a9a9a" --bold
-  __vertical_util_set vertical_git_branch_prefix       ' ❮'
-  __vertical_util_set vertical_git_branch_prefix_color "#565656" --bold
-  __vertical_util_set vertical_git_branch_icon         ' '
-  __vertical_util_set vertical_git_branch_icon_color   "#565656"
+  __vertical_util_set vertical_git_branch_color        "#DEABAB" --bold \
+                                          --background "#232323"
+  __vertical_util_set vertical_git_branch_prefix       ""
+  __vertical_util_set vertical_git_branch_prefix_color "#232323" \
+                                   --bold --background "#232323"
+  __vertical_util_set vertical_git_branch_icon         ""
+  __vertical_util_set vertical_git_branch_icon_color   "#232323"
 
   if not __vertical_util_is_git
     return
