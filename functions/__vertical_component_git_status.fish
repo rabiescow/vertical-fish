@@ -1,9 +1,9 @@
 function __vertical_component_git_status
-  __vertical_util_set vertical_git_status_color             cyan --bold
-  __vertical_util_set vertical_git_status_prefix            ' ['
-  __vertical_util_set vertical_git_status_prefix_color      cyan --bold
-  __vertical_util_set vertical_git_status_suffix            ]
-  __vertical_util_set vertical_git_status_suffix_color      cyan --bold
+  __vertical_util_set vertical_git_status_color             "#343434" --bold
+  __vertical_util_set vertical_git_status_prefix            ' : '
+  __vertical_util_set vertical_git_status_prefix_color      "#343434" --bold
+  __vertical_util_set vertical_git_status_suffix            "❯"
+  __vertical_util_set vertical_git_status_suffix_color      "#565656" --bold
   __vertical_util_set vertical_git_status_sym_added         +
   __vertical_util_set vertical_git_status_sym_added_deleted ±
   __vertical_util_set vertical_git_status_sym_ahead         ↑

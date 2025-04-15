@@ -28,13 +28,13 @@ function __vertical_component_duration
     if [ $h != 0 ]
       set -a dur {$h}h
     end
-    if [ $m != 0 ]
+    if [ $m != 0 ] && [ $d -eq 0 ]
       set -a dur {$m}m
     end
-    if [ $s != 0 ]
+    if [ $s != 0 ] && [ $d -eq 0 ] && [ $t -lt 7200000 ]
       set -a dur {$s}s
     end
-    if [ $ms != 0 ]
+    if [ $ms != 0 ] && [ $d -eq 0 ] && [ $h -eq 0 ] && [ $t -lt 1800000 ]
       set -a dur {$ms}ms
     end
   end

@@ -6,6 +6,8 @@ function vertical_clear_configuration -d 'Clear vertical prompt configuration'
   set -eU vertical_dir_prefix_color
   set -eU vertical_dir_trunc_git
   set -eU vertical_dir_trunc_home
+  set -eU vertical_dir_suffix
+  set -eU vertical_dir_suffix_color
   set -eU vertical_duration_color
   set -eU vertical_duration_min
   set -eU vertical_duration_prefix
@@ -33,12 +35,21 @@ function vertical_clear_configuration -d 'Clear vertical prompt configuration'
   set -eU vertical_host_prefix
   set -eU vertical_host_prefix_color
   set -eU vertical_host_ssh_only
+  set -eU vertical_host_suffix
+  set -eU vertical_host_suffix_color
   set -eU vertical_jobs_color
   set -eU vertical_jobs_prefix
   set -eU vertical_jobs_prefix_color
   set -eU vertical_jobs_sym
   set -eU vertical_newline
   set -eU vertical_order
+  set -eU vertical_order_right
+  set -eU vertical_time_format
+  set -eU vertical_time_color
+  set -eU vertical_time_prefix
+  set -eU vertical_time_prefix_color
+  set -eU vertical_time_suffix
+  set -eU vertical_time_suffix_color
   set -eU vertical_user_color
   set -eU vertical_user_prefix
   set -eU vertical_user_prefix_color
@@ -46,6 +57,10 @@ function vertical_clear_configuration -d 'Clear vertical prompt configuration'
   set -eU vertical_vert_bottom
   set -eU vertical_vert_color_failure
   set -eU vertical_vert_color_success
+  set -eU vertical_vert_color_failure_top
+  set -eU vertical_vert_color_failure_bottom
+  set -eU vertical_vert_color_success_top
+  set -eU vertical_vert_color_success_bottom
   set -eU vertical_vert_top
   set -eU vertical_vi_mode_color
   set -eU vertical_vi_mode_prefix
