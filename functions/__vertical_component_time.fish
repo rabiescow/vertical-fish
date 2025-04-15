@@ -2,7 +2,6 @@ function __vertical_component_time
   __vertical_util_set vertical_time_format       +%T
   __vertical_util_set vertical_time_color        "#CDCDEF" \
                                     --background "#232323"
-  # __vertical_util_set vertical_time_prefix       ""
   __vertical_util_set vertical_time_prefix       " "
   __vertical_util_set vertical_time_prefix_color "#CDCDEF" \
                                     --background "#232323"
