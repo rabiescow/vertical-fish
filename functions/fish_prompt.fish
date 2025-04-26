@@ -15,6 +15,7 @@ function fish_prompt
   for component in $vertical_order
     eval __vertical_component_$component
   end
+  # fish_right_prompt
   echo
   __vertical_component_vert bottom
   __vertical_component_cue

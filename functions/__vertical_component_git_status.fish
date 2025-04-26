@@ -18,12 +18,6 @@ function __vertical_component_git_status
   __vertical_util_set vertical_git_status_sym_stashed       "󰅫 "
   __vertical_util_set vertical_git_status_sym_unmerged      "󰅯 "
   __vertical_util_set vertical_git_status_sym_untracked     "󰅰 "
-  # icons 󰴜 󰧜 󰧖 󰈜 󱃗 󰅮 󰧚 󰅬 󰿉 󰿋 󱅁 󱅄 󰜲 󰜵 󰅱 󱊆 󱥨 󱥪 󱥤 󱥦 󰅭 󰅯 󰜯  󰿠     \
-  #       󰦓 󰴙 󰅰 󱃖 󰛃 󰛁 󰛂 󰛀 󰬟 󰬠 󰬡 󰬝 󰇽 󱑢 󰅨 󰅫 󰒔 󰄮 󱕍 󰄲 \
-  #       󱗜       
-  # circles  󰘽 󰬦 󰬪  󰿡 󰿣 󰁢 󰁟 󰁙 󰁖 󰁒 󰁏 󰁊 󰁇        󰙣 󰙡 󰻃 󰠠 
-  # mode  󰬐 󰬙 󰬝 󰬕  󰰄 󰰟 󰰫 󰰓
-
 
   if not __vertical_util_is_git
     return
