@@ -1,23 +1,29 @@
 function __vertical_component_git_status
-  __vertical_util_set vertical_git_status_color             "#DE9A67" --bold \
+  __vertical_util_set vertical_git_status_color             "#DEABDE" --bold \
                                                --background "#232323"
-  __vertical_util_set vertical_git_status_prefix            "  "
-  __vertical_util_set vertical_git_status_prefix_color      "#ABABDE" --bold \
+  __vertical_util_set vertical_git_status_prefix            " "
+  __vertical_util_set vertical_git_status_prefix_color      "#ABABBC" --bold \
                                                --background "#232323"
-  __vertical_util_set vertical_git_status_suffix            ""
+  __vertical_util_set vertical_git_status_suffix            ""
   __vertical_util_set vertical_git_status_suffix_color      "#232323" --bold \
                                                --background "#232323"
-  __vertical_util_set vertical_git_status_sym_added         +
-  __vertical_util_set vertical_git_status_sym_added_deleted ±
-  __vertical_util_set vertical_git_status_sym_ahead         ↑
-  __vertical_util_set vertical_git_status_sym_behind        ↓
-  __vertical_util_set vertical_git_status_sym_deleted       -
-  __vertical_util_set vertical_git_status_sym_diverged      ↕
-  __vertical_util_set vertical_git_status_sym_modified      •
-  __vertical_util_set vertical_git_status_sym_renamed       ‣
-  __vertical_util_set vertical_git_status_sym_stashed       '#'
-  __vertical_util_set vertical_git_status_sym_unmerged      =
-  __vertical_util_set vertical_git_status_sym_untracked     '?'
+  __vertical_util_set vertical_git_status_sym_added         "󱃗 "
+  __vertical_util_set vertical_git_status_sym_added_deleted "󰦓 "
+  __vertical_util_set vertical_git_status_sym_ahead         "󰧜 "
+  __vertical_util_set vertical_git_status_sym_behind        "󰧖 "
+  __vertical_util_set vertical_git_status_sym_deleted       "󰈜 "
+  __vertical_util_set vertical_git_status_sym_diverged      "󰿠 "
+  __vertical_util_set vertical_git_status_sym_modified      "󱗜 "
+  __vertical_util_set vertical_git_status_sym_renamed       "󰧚 "
+  __vertical_util_set vertical_git_status_sym_stashed       "󰅫 "
+  __vertical_util_set vertical_git_status_sym_unmerged      "󰅯 "
+  __vertical_util_set vertical_git_status_sym_untracked     "󰅰 "
+  # icons 󰴜 󰧜 󰧖 󰈜 󱃗 󰅮 󰧚 󰅬 󰿉 󰿋 󱅁 󱅄 󰜲 󰜵 󰅱 󱊆 󱥨 󱥪 󱥤 󱥦 󰅭 󰅯 󰜯  󰿠     \
+  #       󰦓 󰴙 󰅰 󱃖 󰛃 󰛁 󰛂 󰛀 󰬟 󰬠 󰬡 󰬝 󰇽 󱑢 󰅨 󰅫 󰒔 󰄮 󱕍 󰄲 \
+  #       󱗜       
+  # circles  󰘽 󰬦 󰬪  󰿡 󰿣 󰁢 󰁟 󰁙 󰁖 󰁒 󰁏 󰁊 󰁇        󰙣 󰙡 󰻃 󰠠 
+  # mode  󰬐 󰬙 󰬝 󰬕  󰰄 󰰟 󰰫 󰰓
+
 
   if not __vertical_util_is_git
     return
@@ -85,7 +91,7 @@ function __vertical_component_git_status
     ([ $diverged = true ] && echo $vertical_git_status_sym_diverged) \
   )
 
-  if [ -n "$status_syms" ]
+  # if [ -n "$status_syms" ]
     set_color normal
     set_color $vertical_git_status_prefix_color
     echo -ens $vertical_git_status_prefix
@@ -96,5 +102,5 @@ function __vertical_component_git_status
     set_color $vertical_git_status_suffix_color
     echo -ens $vertical_git_status_suffix
     set_color normal
-  end
+  # end
 end
